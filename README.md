@@ -2,7 +2,6 @@
 
 A modern task management application with integrated Esri maps, featuring dark/light mode, multilingual support, and task analytics.
 
-![App Preview](https://via.placeholder.com/800x400?text=Todo+Tasks+with+Map+Location) *(Replace with actual screenshot)*
 
 ## ✨ Features
 
@@ -49,9 +48,3 @@ A modern task management application with integrated Esri maps, featuring dark/l
    ```bash
    git clone https://github.com/Omariu/TodoMap.git
    cd todo-map-app
-
-
-not working fine 
-http://localhost:3000/counts
-
-no edit api
