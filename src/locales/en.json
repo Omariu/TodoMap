@@ -1,0 +1,15 @@
+{
+    "appName":"Task Manager",
+    "activeCount": "Active: {{count}}",
+    "completedCount": "Completed: {{count}}",
+    "deletedCount": "Deleted: {{count}}",
+    "refreshAriaLabel": "refresh tasks",
+    "cancelButton": "Cancel",
+    "addButton": "Add",
+    "title": "Add New Task",
+    "descriptionLabel": "Task Description",
+    "loading":"Loading...",
+    "locateInfo":" Click on the map to place task location",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+}

@@ -1,0 +1,15 @@
+{
+  "appName": "مدير المهام",
+  "activeCount": "نشطة: {{count}}",
+  "completedCount": "مكتملة: {{count}}",
+  "deletedCount": "محذوفة: {{count}}",
+  "refreshAriaLabel": "تحديث المهام",
+  "cancelButton": "إلغاء",
+  "addButton": "إضافة",
+  "title": "إضافة مهمة جديدة",
+  "descriptionLabel": "وصف المهمة",
+  "loading": "جار التحميل...",
+  "locateInfo": "انقر على الخريطة لتحديد موقع المهمة",
+  "switchToDark": "التغيير إلى الوضع المظلم",
+  "switchToLight": "التغيير إلى الوضع المضيء"
+}
