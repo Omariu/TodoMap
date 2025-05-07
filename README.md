@@ -2,7 +2,7 @@
 
 A modern task management application with integrated Esri maps, featuring dark/light mode, multilingual support, and task analytics.
 
-
+![alt text](image.png)
 ## ✨ Features
 
 ### 📝 Task Management

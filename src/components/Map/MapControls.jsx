@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Fab, Box } from "@mui/material";
 import { Add, Home, Remove } from "@mui/icons-material";
-import { useLanguage } from "../../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const MapControls = ({ view }) => {
-  const { language } = useLanguage();
+  const controlsRef = useRef();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (!view || !controlsRef.current) return;
+
+    const position = i18n.language === "en" ? "bottom-right" : "bottom-left";
+    view.ui.add(controlsRef.current, position);
+
+    return () => {
+      view.ui.remove(controlsRef.current);
+    };
+  }, [view, i18n.language]);
 
   const handleZoomIn = () => {
     if (view) {
-      const zoom = view.zoom + 1;
-      view.goTo({ zoom });
+      view.goTo({ zoom: view.zoom + 1 });
     }
   };
 
   const handleZoomOut = () => {
     if (view) {
-      const zoom = view.zoom - 1;
-      view.goTo({ zoom });
+      view.goTo({ zoom: view.zoom - 1 });
     }
   };
 
@@ -29,24 +39,15 @@ const MapControls = ({ view }) => {
     }
   };
 
-  const rtl = {
-    right: 16,
-  };
-
-  const ltr = {
-    left: 16,
-  };
-
   return (
     <Box
+      ref={controlsRef}
       sx={{
-        ...(language === "ar" ? rtl : ltr),
-        position: "absolute",
-        bottom: 16,
+        zIndex: 100,
+        transition: "all 0.3s ease",
         display: "flex",
         flexDirection: "column",
         gap: 1,
-        zIndex: 1,
       }}
     >
       <Fab
